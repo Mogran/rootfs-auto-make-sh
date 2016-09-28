@@ -1,8 +1,9 @@
 # Overview
-This is shell routine can auto make basic rootfs file which are essential to run linuxOS, when you 
+This is shell routine can auto make basic rootfs files which are essential to run linuxOS, when you 
 have finished migrate busybox, the next steps always will be create different
 files that needed by rootfs. So. this demo script can help you to improve your
-work more effective.
+work more effective, after you run make_rootfs.sh , it will generate some files
+automatically.
 
 # How to use this script ?
 
@@ -10,7 +11,7 @@ of course,you should get this script firstly.
 
 - How to download ?
 	- if you get a git, you can run code as follow:
-	> git clone git@github.com:Morgan/rootfs-auto-make-sh.git
+	- git clone git@github.com:Morgan/rootfs-auto-make-sh.git
 
 - How to use this?
 	- cd $(Your_Busybox_Dir)
