@@ -1,7 +1,7 @@
 #!/bin/sh
 
 mkdir dev etc lib home root var proc sys mnt tmp
-mkdir usr/lib
+mkdir usr/lib var/yaffs
 
 touch etc/inittab
 echo "::sysinit:/etc/init.d/rcS" > etc/inittab
@@ -20,6 +20,7 @@ echo "mount -a" >> etc/init.d/rcS
 echo "mkdir /dev/pts" >> etc/init.d/rcS
 echo "mount -t devpts devpts /dev/pts" >> etc/init.d/rcS
 echo "echo /sbin/mdev > /proc/sys/kernel/hotplug" >> etc/init.d/rcS
+echo "mount -t yaffs2 /dev/mtdblock5 /var/yaffs"
 echo "mdev -s" >> etc/init.d/rcS
 echo "etc/rc.d/init.d/odf_start &" >> etc/init.d/rcS
 
